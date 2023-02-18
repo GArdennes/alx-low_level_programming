@@ -25,7 +25,7 @@ int main(void)
 			if (i == 98 && a == 99)
 			{
 				putchar('\n');
-			} else 
+			} else
 			{
 				putchar(',');
 				putchar(' ');
