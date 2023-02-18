@@ -17,15 +17,16 @@ int main(void)
 	{
 		for (a = i + 1; a < 100; ++a)
 		{
-			putchar('0' + i/10);
-			putchar('0' + i%10);
+			putchar('0' + i / 10);
+			putchar('0' + i % 10);
 			putchar(' ');
-			putchar('0' + a/10);
-			putchar('0' + a%10);
-			if (i == 99 && a == 99)
+			putchar('0' + a / 10);
+			putchar('0' + a % 10);
+			if (i == 98 && a == 99)
 			{
 				putchar('\n');
-			} else {
+			} else 
+			{
 				putchar(',');
 				putchar(' ');
 			}
