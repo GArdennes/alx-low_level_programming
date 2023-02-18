@@ -14,7 +14,7 @@ int main(void)
 	int a;
 	int x;
 
-	for (i = 0;i < 10; ++i)
+	for (i = 0; i < 10; ++i)
 	{
 		for (a = i + 1; a < 10; ++a)
 		{
@@ -23,7 +23,7 @@ int main(void)
 				putchar('0' + i);
 				putchar('0' + a);
 				putchar('0' + x);
-				if (i < 8)
+				if (i < 7)
 				{
 					putchar(',');
 					putchar(' ');
