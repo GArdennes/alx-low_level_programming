@@ -12,5 +12,9 @@ int print_last_digit(int n)
 	int lstdgt;
 
 	lstdgt = n % 10;
+
+	if (lstdgt < 0)
+		lstdgt *= -1;
+
 	return (lstdgt);
 }
