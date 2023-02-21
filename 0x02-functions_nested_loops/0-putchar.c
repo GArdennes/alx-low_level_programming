@@ -13,7 +13,7 @@ int main(void)
 	char c[] = "_putchar";
 	int i;
 
-	for (i = 0; i < (sizeof(c) - 1); i++)
+	for (i = 0; i < (int)(sizeof(c) - 1); i++)
 	{
 		putchar(c[i]);
 	}
