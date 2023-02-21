@@ -2,15 +2,18 @@
 
 /**
  * _islower - Function checking if a variable is lowercase
+ * @c: The character to check
+ *
+ * Return: On success 1,
+ * On error, 0 is returned.
  */
 
 int _islower(int c)
 {
 	if (islower(c) == 0)
 	{
-		_putchar('0');
+		return (0);
 	}
 	else
-		_putchar('1');
-	return (0);
+		return (1);
 }
