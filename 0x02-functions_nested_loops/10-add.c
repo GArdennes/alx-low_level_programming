@@ -15,7 +15,5 @@ int add(int n, int x)
 
 	sum = n + x;
 
-	_putchar('0' + sum);
-
 	return (sum);
 }
