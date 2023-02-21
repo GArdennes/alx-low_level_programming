@@ -5,7 +5,7 @@
  * @n: The character to check
  */
 
-void times_table(void)
+void print_to_98(int n)
 {
 	int i;
 	
