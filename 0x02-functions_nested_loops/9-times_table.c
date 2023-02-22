@@ -6,27 +6,28 @@
 
 void times_table(void)
 {
-	int i, a, product, d1, d2;
+	int i, a, product;
 
 	for (i = 0; i <= 9; i++)
 	{
+		_putchar('0');
+
 		for (a = 0; a <= 9; a++)
 		{
+			_putchar(',');
+			_putchar(' ');
+
 			product = i * a;
-			d1 = product / 10;
-			if (d1 != 0)
-				_putchar('0' + d1);
-			else
+
+			if (product <= 0)
 				_putchar(' ');
-			d2 = product % 10;
-			_putchar('0' + d2);
-			if (a == 9)
-				_putchar('\n');
 			else
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+				_putchar((product / 10) + '0');
+
+			_putchar((product % 10) + '0');
+			
 		}
+
+		_putchar('\n');
 	}
 }
