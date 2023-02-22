@@ -2,6 +2,7 @@
 
 /**
  * print_times_table - Prints the times table
+ *@n - character to check
  */
 
 void print_times_table(int n)
