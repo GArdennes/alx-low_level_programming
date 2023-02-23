@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - function that prints an escape character n times
- * @n - Character to check
+ * @n: Character to check
  */
 
 void print_diagonal(int n)
@@ -13,7 +13,7 @@ void print_diagonal(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-			for (a = 0; a <= i; a++)
+			for (a = 0; a < i; a++)
 				_putchar(' ');
 			_putchar('\\');
 			_putchar('\n');
