@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_diagonal - function that prints an escape character n times
- * @size - Character to check
+ * print_square - function that prints a hash character n times
+ * @size: Character to check
  */
 
-void print_diagonal(int n)
+void print_square(int size)
 {
 	int i, a;
 
@@ -18,5 +18,6 @@ void print_diagonal(int n)
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
+	else
+		_putchar('\n');
 }
