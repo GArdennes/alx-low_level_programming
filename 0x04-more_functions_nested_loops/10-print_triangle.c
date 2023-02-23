@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - function that prints a hash character as a triangle
- * @size - Character to check
+ * @size: Character to check
  */
 
 void print_triangle(int size)
@@ -13,7 +13,7 @@ void print_triangle(int size)
 	{
 		for (i = 0; i < size; i++)
 		{
-			for (a = size; a >= i; a--)
+			for (a = size; a > i; a--)
 				_putchar(' ');
 			for (x = 0; x <= i; x++)
 				_putchar('#');
