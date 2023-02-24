@@ -8,25 +8,16 @@
 
 int main(void)
 {
-	int n = 782849;
-	int i, x, check, prime;
+	int n = 61285245143;
+	int i;
 
-	for (i = 2; i <= n; i++)
+	for (i - 3; i < 782849; i = i + 2)
 	{
-		check = 1;
-		for (x = 2; (x * x) <= i; x++)
+		while ((n % i == 0) && (n != i))
 		{
-			if (i % x == 0)
-			{
-				check = 0;
-				break;
-			}
-		}
-		if (check == 1)
-		{
-			prime = i;
+			n = n / i;
 		}
 	}
-	printf("%d\n", prime);
+	printf("%d\n", n);
 	return (0);
 }
