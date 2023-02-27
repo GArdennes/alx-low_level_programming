@@ -12,7 +12,7 @@ void puts_half(char *str)
 	int ohalf;
 
 	ehalf = strlen(str) / 2;
-	ohalf = (strlen(str) - 1) / 2;
+	ohalf = strlen(str) / 2;
 
 	if (strlen(str) % 2 == 0)
 	{
@@ -20,7 +20,7 @@ void puts_half(char *str)
 			_putchar(str[i]);
 	} else
 	{
-		for (i = ehalf; i < strlen(str); i++)
+		for (i = ohalf; i < strlen(str); i++)
 			_putchar(str[i]);
 	}
 	_putchar('\n');
