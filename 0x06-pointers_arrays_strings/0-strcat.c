@@ -9,10 +9,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *result = malloc(strlen(dest) + strlen(src) + 1);
+	int i = 0, j = 0;
+	
+	while (dest[i++])
+	{
+		j++;
+	}
+	while (src[i])
+	{
+		dest[j++] = src[i];
+		i++;
+	}
 
-	strcpy(result, dest);
-	strcat(result, src);
-
-	return (result);
+	return (dest);
 }
