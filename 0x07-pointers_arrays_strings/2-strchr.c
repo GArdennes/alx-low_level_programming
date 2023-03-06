@@ -11,7 +11,7 @@
 char *_strchar(char *s, char c)
 {
 	int a;
-	
+
 	while (*s != '\0')
 	{
 		a = *s++;
