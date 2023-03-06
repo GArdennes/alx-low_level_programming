@@ -10,13 +10,16 @@
 
 char *_strchar(char *s, char c)
 {
+	int a;
+	
 	while (*s != '\0')
 	{
-		if (*s == c)
-			return ((char *) s);
+		a = *s++;
+		if (a == c)
+			return (s - 1);
+		if (a == 0)
+			return (NULL);
 		s++;
 	}
-	if (*s == c)
-		return ((char *) s);
 	return (NULL);
 }
