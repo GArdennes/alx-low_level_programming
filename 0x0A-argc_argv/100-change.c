@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		return (0);
 	}
 
-	quarters = i / 10;
+	quarters = i / 25;
 	i = i % 25;
 	dimes = i / 10;
 	i = i % 10;
