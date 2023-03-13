@@ -10,9 +10,8 @@
 
 int main(int argc, char **argv)
 {
-	int x, t, total_coins;
 	int i = atoi(argv[1]);
-	int s[5] = {25, 10, 5, 2, 1};
+	int quarters, dimes, nickels, pennies, total_coins;
 
 	if (argc != 2)
 	{
@@ -26,14 +25,15 @@ int main(int argc, char **argv)
 		return (0);
 	}
 
-	for (x = 0; x < 5; x++)
-	{
-		t = i / (s[x]);
-		i -= t * s[x];
-		total_coins += t;
-		if (i == 0)
-			break;
-	}
+	quarters = i / 25;
+	i = i % 25;
+	dimes = i / 10;
+	i = i % 10;
+	nickels = i / 5;
+	i = i % 5;
+	pennies = i;
+
+	total_coins = quarters + dimes + nickels + pennies;
 
 	printf("%d\n", total_coins);
 
