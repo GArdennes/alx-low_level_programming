@@ -20,9 +20,6 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		printf("%d\n", (i * j));
-		return (0);
-	}
+	printf("%d\n", (i * j));
+	return (0);
 }
