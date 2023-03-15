@@ -31,14 +31,8 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		len = strlen(av[i]) + 1;
-		memcpy(result + j, av[i], len);
+		memcpy(result + j, av[i] + '\n', len);
 		j += len;
-
-		if (i < ac - 1)
-		{
-			result[j] = '\n';
-			j++;
-		}
 	}
 
 	return (result);
