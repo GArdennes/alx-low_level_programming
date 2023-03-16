@@ -41,7 +41,7 @@ void multiply(char *num1, char *num2)
 	while (num2[len2] != '\0')
 		len2++;
 
-	result = _calloc(len1 + len2, sizeof(int));
+	result = calloc(len1 + len2, sizeof(int));
 
 	if (result == NULL)
 		exit(98);
