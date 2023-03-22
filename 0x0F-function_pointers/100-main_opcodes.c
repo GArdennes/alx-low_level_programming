@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	{
 		if (index == bytes - 1)
 		{
-			printf("%02hhx\n", opcode[indeix]);
+			printf("%02hhx\n", opcode[index]);
 			break;
 		}
 		printf("%02hhx ", opcode[index]);
