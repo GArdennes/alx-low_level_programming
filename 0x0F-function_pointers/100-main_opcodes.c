@@ -35,11 +35,10 @@ int main(int argc, char *argv[])
 	{
 		if (index == bytes - 1)
 		{
-			printf("%02hhx\n",opcode[index]);
+			printf("%02hhx\n", opcode[indeix]);
 			break;
 		}
 		printf("%02hhx ", opcode[index]);
 	}
-	
 	return (0);
 }
