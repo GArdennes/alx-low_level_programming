@@ -18,6 +18,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	*head = crnt_node;
 
-	return (crnt_node);
+	return (*head);
 }
 
