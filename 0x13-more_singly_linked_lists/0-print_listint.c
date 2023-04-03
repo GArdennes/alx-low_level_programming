@@ -7,8 +7,11 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t i = 0;
+	size_t i = 1;
 	const listint_t *current_node = h;
+
+	if (h == NULL)
+		return (0);
 
 	while (current_node != NULL)
 	{
