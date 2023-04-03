@@ -17,11 +17,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	if (crnt_node == NULL)
 		return (NULL);
 	crnt_node->n = n;
-	if (crnt_node->n == NULL)
-	{
-		free(crnt_node);
-		return (NULL);
-	}
 	crnt_node->next = *head;
 
 	*head = crnt_node;
