@@ -10,10 +10,18 @@ listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *crnt_node;
 
+	if (head == NULL)
+		return (NULL);
+
 	crnt_node = malloc(sizeof(listint_t));
 	if (crnt_node == NULL)
 		return (NULL);
 	crnt_node->n = n;
+	if (crnt_node->n == NULL)
+	{
+		free(crnt_node);
+		return (NULL);
+	}
 	crnt_node->next = *head;
 
 	*head = crnt_node;
