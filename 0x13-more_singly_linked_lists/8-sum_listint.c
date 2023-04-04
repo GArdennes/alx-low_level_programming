@@ -9,13 +9,11 @@
 int sum_list(listint_t *head)
 {
 	int count = 0;
-	listint_t *crnt_node;
 
-	crnt_node = head;
-	while (crnt_node != NULL)
+	while (head)
 	{
-		count += crnt_node->n;
-		crnt_node = crnt_node->next;
+		count += head->n;
+		head = head->next;
 	}
 	return (count);
 }
