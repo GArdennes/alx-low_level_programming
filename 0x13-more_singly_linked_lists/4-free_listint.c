@@ -6,14 +6,12 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *crnt_node, *nxt_node;
+listint_t *temp;
 
-	crnt_node = head;
-	while (crnt_node != NULL)
-	{
-		nxt_node = crnt_node->next;
-		free(crnt_node);
-		crnt_node = nxt_node;
-	}
-	head = NULL;
+while (head != NULL)
+{
+	temp = head;
+	head = head->next;
+	free(temp);
+}
 }
