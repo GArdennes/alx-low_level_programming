@@ -1,19 +1,22 @@
-#include "lists.h"
-
-/**
- *free_listint2 - free nodes of memory
- *@head: header node to check
- */
 void free_listint2(listint_t **head)
 {
-listint_t *crnt_node, *nxt_node;
+	listint_t *current, *temp;
 
-crnt_node = *head;
-while (crnt_node != NULL)
-{
-	nxt_node = crnt_node->next;
-	free(crnt_node);
-	crnt_node = nxt_node;
-}
-head = NULL;
+	if (head != NULL)
+	{
+		/*set head addr to current*/
+		current = *head;
+
+		/*iterate through the whole list*/
+		/*while setting the current node to temp*/
+		while ((temp = current) != NULL)
+		{
+			/*set next node to curretnt*/
+			current = current->next;
+			/*free temp, that is the current node*/
+			free(temp);
+		}
+
+		*head = NULL;
+	}
 }
