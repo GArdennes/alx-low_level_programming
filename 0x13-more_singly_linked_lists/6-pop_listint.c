@@ -1,22 +1,15 @@
-#include "lists.h"
-
-/**
- *pop_listint - removes the head node
- *@head: Head node
- *Return: On success 1
- */
-int pop_listint(listint_t ***head)
+int pop_listint(listint_t **head)
 {
-listint_t *crnt_node;
-int data = 0;
+	listint_t *temp;
+	int num;
 
-if (head == NULL)
-	return (data);
+	if (!head || !*head)
+		return (0);
 
-crnt_node = **head;
-**head = crnt_node->next;
-data = crnt_node->n;
-free(crnt_node);
+	num = (*head)->n;
+	temp = (*head)->next;
+	free(*head);
+	*head = temp;
 
-return (data);
+	return (num);
 }
