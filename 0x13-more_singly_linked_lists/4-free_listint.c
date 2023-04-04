@@ -1,17 +1,20 @@
 #include "lists.h"
 
-/**
- * free_listint - frees list node
- * @head: head node to check
+/** 
+ *free_listint - frees list node
+ *@head: Head node to check
  */
 void free_listint(listint_t *head)
 {
-listint_t *temp;
+listint_t *crnt_node, *nxt_node;
 
-while (head != NULL)
+crnt_node = head;
+while(crnt_node != NULL)
 {
-	temp = head;
-	head = head->next;
-	free(temp);
+	nxt_node = crnt_node -> next;
+	free(crnt_node);
+	crnt_node = nxt_node;
 }
+head = NULL;
 }
+
