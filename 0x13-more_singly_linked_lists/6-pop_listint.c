@@ -14,8 +14,8 @@ if (head == NULL)
 	return (data);
 
 crnt_node = *head;
-*head = crnt_node -> next;
-data = crnt_node -> n;
+data = crnt_node->n;
+*head = crnt_node->next;
 free(crnt_node);
 
 return (data);
