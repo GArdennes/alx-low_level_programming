@@ -31,7 +31,7 @@ for (i = 0; i < idx - 1; i++)
 {
 	if (new_node == NULL || new_node->next == NULL)
 	{
-		free(crnt_node);
+		/*free(crnt_node);*/
 		return (NULL);
 	}
 	new_node = new_node->next;
