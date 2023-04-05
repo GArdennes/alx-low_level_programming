@@ -21,15 +21,15 @@ if (index == 0)
 free(crnt_node);
 return (1);
 }
-while (crnt_node != NULL && counter != index)
+while (counter < (index - 1))
 {
-prev_node = crnt_node;
+if (crnt_node->next == NULL)
+	return (-1);
 crnt_node = crnt_node->next;
 counter++;
 }
-if (crnt_node == NULL)
-	return (-1);
-prev_node->next = crnt_node->next;
-free(crnt_node);
+prev_node = crnt_node->next;
+crnt_node->next = prev_node->next;
+free(prev_node);
 return (1);
 }
