@@ -11,10 +11,9 @@ listint_t *crnt_node, *nxt_node;
 crnt_node = head;
 while(crnt_node != NULL)
 {
-	nxt_node = crnt_node -> next;
+	nxt_node = crnt_node->next;
 	free(crnt_node);
 	crnt_node = nxt_node;
 }
-head = NULL;
 }
 
