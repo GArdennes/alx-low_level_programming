@@ -6,7 +6,7 @@
  *
  * Return: On success result
  */
-int sum_list(listint_t *head)
+int sum_listint(listint_t *head)
 {
 	int count = 0;
 
