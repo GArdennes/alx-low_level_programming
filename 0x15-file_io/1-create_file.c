@@ -41,12 +41,11 @@ int create_file(const char *filename, char *text_content)
 	{
 		length = _strlen(text_content);
 		bytes_written = write(file_ptr, text_content, length);
-
-		if (bytes_written != (ssize_t)length)
-		{
-			close(file_ptr);
-			return (-1);
-		}
+	}
+	if (bytes_written == -1)
+	{
+		close(file_ptr);
+		return (-1);
 	}
 	close(file_ptr);
 	return (1);
