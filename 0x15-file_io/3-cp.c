@@ -6,7 +6,7 @@
  * error_file - program checks if files can be opened.
  * @file_from: File from
  * @file_to: File to
- * @arv: arguments
+ * @argv: arguments
  */
 void error_file(int file_from, int file_to, char *argv[])
 {
