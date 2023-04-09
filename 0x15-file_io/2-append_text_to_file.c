@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - calculates length of string
- * @c: String to check
- * Return: On success result
- */
-size_t _strlen(char *c)
-{
-	size_t len = 0;
-
-	while (*c != '\0')
-	{
-		len++;
-		c++;
-	}
-	return (len);
-}
-
-/**
  * append_text_to_file - appends text to file
  * @filename: String to check
  * @text_content: String to append
@@ -37,12 +20,12 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		len = _strlen(text_content);
+		for (len = 0; text_content[len];)
+			len++
 		written = write(file_ptr, text_content, len);
 	}
 	if (written == -1)
 	{
-		close(file_ptr);
 		return (-1);
 	}
 	close(file_ptr);
