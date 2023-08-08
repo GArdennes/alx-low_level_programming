@@ -3,7 +3,7 @@
 /**
  * read_textfile - uses system call open, read, write
  * @filename: String to check
- * @letter: Characters to check
+ * @letters: Characters to check
  * Return: Bytes read
  */
 ssize_t read_textfile(const char *filename, size_t letters)
