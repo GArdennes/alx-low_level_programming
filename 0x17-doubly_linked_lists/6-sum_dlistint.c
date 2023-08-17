@@ -5,7 +5,7 @@
  * @head: dlistint_t head
  * Return: On success int
  */
-int sum_dlistint(dlistint *head)
+int sum_dlistint(dlistint_t *head)
 {
 	int count = 0;
 
