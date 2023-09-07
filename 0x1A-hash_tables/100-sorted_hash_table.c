@@ -1,4 +1,4 @@
-#include "hash_tables.h"
+#include "shash_tables.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -180,4 +180,28 @@ void shash_table_delete(shash_table_t *ht)
 		free(ht->array);
 	}
 	free(ht);
+}
+
+
+/**
+ * shash_table_print_rev - Prints a sorted hash table in reverse order.
+ * @ht: A pointer to the sorted hash table to print.
+ */
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	shash_node_t *node;
+
+	if (ht == NULL)
+		return;
+
+	node = ht->stail;
+	printf("{");
+	while (node != NULL)
+	{
+		printf("'%s': '%s'", node->key, node->value);
+		node = node->sprev;
+		if (node != NULL)
+			printf(", ");
+	}
+	printf("}\n");
 }
