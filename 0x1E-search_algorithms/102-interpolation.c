@@ -32,7 +32,7 @@ int interpolation_search(int *array, size_t size, int value)
 		else if (array[pos] > value)
 			high = pos - 1;
 		else
-			return (pos);
+			return ((int)pos);
 	}
 	return (-1);
 }
